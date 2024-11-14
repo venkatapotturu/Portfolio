@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    flex-direction: column; /* Stack cards vertically */
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between cards */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.cloud-card {
+    position: relative;
+    width: 80vw; /* Make it responsive */
+    max-width: 500px; /* Limit max width */
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    text-align: center; /* Center the text */
+    color: white; /* Text color is white */
+}
+
+.cloud-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Cloud shape */
+.cloud-shape {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Maximum height for cloud */
+    fill: #3498db; /* Cloud color (blue) */
+}
+
+/* Cloud text */
+.cloud-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white; /* White text */
+    padding: 10px;
+    width: 90%; /* Ensure text fits within the cloud */
+    overflow: hidden; /* Hide overflow text */
+    word-wrap: break-word; /* Break long words */
+    white-space: normal; /* Allow text to wrap */
+}
+
+/* For larger screens */
+@media (max-width: 768px) {
+    .cloud-card {
+        width: 90vw;
+    }
+
+    .cloud-text {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cloud-card {
+        width: 100vw;
+    }
+
+    .cloud-text {
+        font-size: 1em;
+    }
+}
